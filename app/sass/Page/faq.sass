@@ -1,0 +1,149 @@
+@import ../Abstract/__variables
+@import ../Abstract/__extend
+@import ../Abstract/__mixin
+@import ../Layout/__parimary
+@import ../Layout/__header
+@import ../Layout/__footer
+
+.faq
+    &__background
+        width: 100%
+        figure 
+            width: 100%
+            position: relative
+            +tablet()
+                overflow: hidden
+                display: flex 
+                justify-content: flex-end
+        img 
+            display: block
+            width: 100%
+            +tablet()
+                width: auto 
+                max-height: 190px
+                height: 100%
+            +mobile()
+                height: 46.9vw
+        &--inner 
+            position: absolute 
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 1
+            & > span 
+                font-family: $fontKozuka
+                color: $colorTextDefault
+                display: block
+                width: max-content
+                margin: auto
+                &:first-child
+                    font-size: 3rem
+                    +mobile()
+                        font-size: 2rem
+                &:last-of-type
+                    font-size: 2rem
+                    color: #00a0e9
+                    +mobile()
+                        font-size: 1.8rem
+    &__questions 
+        max-width: 1040px
+        padding: 80px 20px 0px
+        width: 100%
+        margin: auto
+        color: $colorTextDefault
+        +mobile()
+            padding: 20px 20px 0px
+            max-width: 600px
+        & > * 
+            &:not(:last-of-type)
+                padding-bottom: 45px
+                border-bottom: 1px solid #c9c9c9
+                +mobile()
+                    padding-bottom: 15px
+        &--Q
+            display: flex 
+            font-weight: bold
+            font-size: 1.6rem
+            align-items: baseline
+            position: relative
+            padding: 55px 40px 10px 0px
+            +mobile()
+                font-size: 1.4rem
+                padding: 25px 40px 10px 0px
+            span 
+                color: #00a0e9
+                font-size: 3rem
+                display: block
+                max-width: 5rem
+                width: 100%
+                +mobile()
+                    font-size: 2.8rem
+        &--button
+            position: absolute 
+            top: 55px
+            right: 0px
+            width: 30px
+            height: 30px
+            display: flex 
+            align-items: center 
+            justify-content: center
+            cursor: pointer
+            +mobile()
+                top: 40px
+                width: 20px
+                height: 20px
+            & > span 
+                position: absolute
+                width: 100%
+                height: 1px
+                background-color: #000000
+                transform-origin: center center
+                &:last-of-type
+                    transform: rotate(90deg)
+                    transition: transform 0.3s ease
+        &--A 
+            height: 0px
+            overflow: hidden
+            transition: height 0.3s ease
+        &--hiden 
+            display: flex 
+            align-items: baseline
+            color: $colorTextDefault
+            & > span 
+                font-size: 2.4rem 
+                max-width: 50px 
+                font-weight: bold
+                width: 100%
+                padding-left: 7px
+                +mobile()
+                    font-size: 1.8rem
+            & > p 
+                font-size: 1.6rem
+                +mobile()
+                    font-size: 1.4rem
+        & > a 
+            display: flex 
+            height: 100px
+            max-width: 400px
+            margin: 100px auto 120px
+            align-items: center 
+            justify-content: center
+            font-size: 3.2rem 
+            color: white 
+            font-weight: bold
+            background-color: #00a0e9
+            text-decoration: none
+            width: 100%
+            +mobile()
+                height: 60px
+                max-width: 300px
+                font-size: 2rem
+                margin: 40px auto 60px
+        &--part
+            &.active 
+                .faq__questions--A
+                    height: auto
+                .faq__questions--button
+                    span 
+                        &:last-of-type
+                            transform: rotate(0deg)

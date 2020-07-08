@@ -1,0 +1,41 @@
+@import ../Abstract/__mixin
+@import ../Abstract/__variables
+
+.fold2__button--arrow
+    display: flex 
+    flex-flow: column nowrap 
+    position: relative 
+    height: 30px
+    width: 30px
+    +mobile()
+        height: 20px
+        width: 20px
+    span 
+        display: block
+        position: absolute 
+        width: 100%
+        overflow: hidden
+        &::after 
+            content: ''
+            position: absolute 
+            right: 0px
+            height: 100%
+            width: 4px
+            background-color: $colorTextDefault
+            transition: all 0.4s ease
+            +mobile()
+                width: 2px
+        &:first-of-type
+            top: 0px
+            height: 50%
+            right: 0px
+            &::after 
+                transform-origin: bottom right
+                transform: rotate(-40deg)
+        &:last-of-type 
+            bottom: 0px
+            height: 50%
+            right: 0px
+            &::after 
+                transform-origin: top right
+                transform: rotate(40deg)

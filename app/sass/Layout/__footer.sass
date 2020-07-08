@@ -1,0 +1,178 @@
+// @import ../Abstract/__variables
+// @import ../Abstract/__mixin
+
+.footer
+    width: 100%
+    background-color: #00a0e9
+    &__wrapper 
+        align-items: flex-start
+        padding: 85px 20px 70px
+        max-width: 1160px
+        width: 100%
+        margin: auto 
+        +mobile()
+            padding: 30px 0px 30px
+        &--h2
+            +mobile()
+                padding: 10px 20px
+            img 
+                max-width: 310px
+                width: 100% 
+                +mobile()
+                    max-width: 250px
+        &--wrapUl
+            max-width: 52%
+            width: 100%
+            display: flex
+            justify-content: space-between
+            +mobile()
+                max-width: 550px
+                flex-wrap: wrap
+            +mediaCustom(400px)
+                justify-content: center
+            & > ul
+                padding: 0px
+                +mobile()
+                    padding: 10px 20px
+                +mediaCustom(400px)
+                    min-width: 233px
+            li 
+                list-style-type: none
+            a 
+                text-decoration: none
+                font-weight: bold 
+                color: white
+                font-size: 1.6rem
+                line-height: 2.6
+                display: block
+                +mobile()
+                    font-size: 1.4rem
+    &__inner
+        text-align: left
+        display: flex 
+        justify-content: space-between
+        max-width: 900px
+        width: 100%
+        +mobile()
+            flex-wrap: wrap
+            justify-content: space-around
+    &__copyright 
+        width: 100%
+        background-color: #086bb6
+        font-size: 14px
+        height: 100px
+        display: flex 
+        align-items: center
+        +mobile()
+            height: auto 
+            padding: 10px 0px
+        &--wrap
+            max-width: 1160px
+            padding: 0px 20px
+            width: 100%
+            margin: auto
+            display: flex
+            justify-content: space-between
+            +mobile()
+                flex-wrap: wrap
+        &--div
+            max-width: 350px
+            width: 100%
+            display: flex
+            justify-content: space-between
+            margin-right: 30px
+            +mobile()
+                flex-wrap: wrap
+                & > * 
+                    padding: 10px 0px
+        a 
+            text-decoration: none
+            color: white
+            font-size: 14px
+            display: block
+            opacity: 1
+            transition: opacity 0.3s ease
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: calc(100% + 10px)
+                background-image: url(../images/bg_icon_window.png)
+                height: 12px
+                width: 12px
+                background-size: contain
+            &:hover
+                opacity: 0.8
+            &:not(:last-of-type)
+                margin-right: 20px
+        &--p 
+            color: white
+            +mobile()
+                padding: 10px 0px
+        
+// #backTop
+//     position: fixed 
+//     z-index: 5
+//     right: 5vw 
+//     bottom: 70px
+//     height: 80px
+//     width: 80px
+//     display: flex 
+//     padding: 30px 20px
+//     opacity: 0
+//     transition: opacity 0.3s ease
+//     box-shadow: rgba(white, 0.5) 0px 0px 5px
+//     +mobile()
+//         height: 12.5vw
+//         width: 12.5vw
+//         max-width: 50px
+//         max-height: 50px
+//         padding: 0px 5px 0px
+//         align-items: center
+//         overflow: hidden
+//     &::after
+//         +psuedoDefault(0px)
+//         z-index: -1 
+//         background-color: #333333
+//         opacity: 1
+//         transition: opacity 0.3s ease
+//     span 
+//         display: block
+//         width: 50%
+//         position: relative
+//         z-index: 0 
+//         overflow: hidden
+//         +mobile()
+//             height: 40%
+//         &::after
+//             position: absolute
+//             top: 0px
+//             height: 3px
+//             left: 0px
+//             width: 100%
+//             content: ''
+//             background-color: white
+//             transition: transform 0.3s ease
+//             border-radius: 1.5px
+//         &:first-of-type
+//             &::after
+//                 transform-origin: right top 
+//                 transform: rotate(-40deg)
+//         &:last-of-type
+//             &::after
+//                 transform-origin: left  top 
+//                 transform: rotate(40deg)
+//     &.active 
+//         opacity: 1
+//     &:hover
+//         &::after
+//             opacity: 0.8
+//         span
+//             &:first-of-type
+//                 &::after
+//                     transform: rotate(-50deg)
+//             &:last-of-type
+//                 &::after
+//                     transform: rotate(50deg)

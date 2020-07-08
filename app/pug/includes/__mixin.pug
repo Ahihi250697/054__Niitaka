@@ -1,0 +1,114 @@
+mixin fonts(...items)
+    each item in items 
+        link(href=item rel="stylesheet")
+        
+mixin css(...items)
+    each item in items 
+        link(href!=item rel="stylesheet")
+
+mixin script(...items)
+    each item in items 
+        script(src=item)
+
+mixin layoutHeader(path, ...items)
+    h1.header__h1
+        figure
+            img(src= path + "/img__logo.png" alt="ロゴ")
+            a(href="../index.html")
+        img(src= path + "/img__logoText.png" alt="ロゴ")
+    div.header__vendor
+        - var list = 1
+        each item in items
+            if item
+                div(class="header__vendor--div" + list++)
+                    a(href='#link')!= item
+            else 
+                div(class="header__vendor--div3")
+                    a(href='#link') ENTRY
+        div.header__bar
+            span 
+            span 
+            span
+
+mixin layoutLinkTop(...items)
+    div.sectionPrimary__top
+        div.sectionPrimary__parent
+            a(href="../index.html") TOP
+            div.sectionPrimary__top--wrapper
+                each  item in items 
+                    a(href="#link")                                                                           
+                        span= item
+mixin layoutHeaderTitle(title1, title2)
+    h2.sectionPrimary__title 
+        span= title1
+        span= title2
+
+mixin layoutslider(namclass,...items)
+    - var list = 1
+    each item in items
+        figure(class= namclass + "--figure figure" + list++)
+            img(class= namclass + "--img", src=item, alt="ビジネス-バックグラウンド")
+
+mixin layoutUlfooter(nameClass)
+    h2(class= nameClass + 'h2')
+        img(src='../images/ita_logo_footer.png' alt="ロゴ")
+    div(class= nameClass + 'wrapUl')
+        ul(class= nameClass + 'ul')
+            li 
+                a(href='#link') - 早わかりインフォテクノ朝日
+            li 
+                a(href='#link') - 募集要項(新卒・中途)
+            li 
+                a(href='#link') - 人事・教育制度
+            li 
+                a(href='#link')!= '- 採用Q&A'
+        ul(class= nameClass + 'ul')
+            li 
+                a(href='#link') - 社員紹介(T.I.)
+            li 
+                a(href='#link') - 社員紹介(M.M.)
+            li 
+                a(href='#link') - 社員紹介(S.O.)
+            li 
+                a(href='#link') - 社員紹介(Y.I.)
+
+mixin layoutQuestion(title)
+    div.faq__questions--part
+        div.faq__questions--Q
+            span Q.
+            p= title 
+            div.faq__questions--button 
+                span 
+                span
+        div.faq__questions--A 
+            div.faq__questions--hiden
+                span A.
+                if block 
+                    block
+
+mixin layoutUlMenu(title, ...items)
+    div.header__menu--wrap
+        h3.header__menu--title= title
+        ul.header__menu--ul
+            each item in items
+                li.header__menu--list
+                    div.header__menu--arrow
+                        span
+                        span
+                    a(href="#link")= item
+
+mixin layoutModal(word, title, content)
+    div(class="modal__container word" + word)
+        h2.modal__title
+            span word
+            span= word
+        div.modal__wrapper
+            figure 
+                img(src="../images/img_page2_modalword" + word + ".png")
+            div.modal__content 
+                span!= title 
+                p!= content
+                a(href="#link") 詳細はこちら
+        div.modal__cross
+            span 
+            span

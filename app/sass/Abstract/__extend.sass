@@ -1,0 +1,22 @@
+@import ../Abstract/__mixin
+
+%__styleTile
+    font-weight: bold 
+    display: block
+    font-size: 20px
+    position: relative
+    padding-top: 22px
+    +mobile()
+        padding-top: 15px
+        font-size: map-get($fontbreakpoint, 'font18')
+    &::after
+        content: ''
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 90px
+        height: 4px
+        background-image: linear-gradient(to right, #f1a40a 30%, #2f4fa2 30%)
+        +mobile()
+            width: 70px
+    
