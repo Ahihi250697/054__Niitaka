@@ -773,8 +773,136 @@ $c-lightWhite: #f5f6f8;
 
 	}
 }
+.pick-up{
+	width: 100%;
+	margin-top: 5rem;
+	&-header{
+		padding-top: 5rem;
+		&--title{
+			padding-left: 1.5rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			h2{
+				font-weight: bold;
+				font-size: 2.4rem;
+			}
+		}
+		&--title::after, &--title::before{
+			content: '';
+			width: .7rem;
+			height: .2rem;
+			position: absolute;
+			left: 0;
+		}
+		&--title::before{
+			background-color: $c-mainColor;
+		}
+		&--title::after{
+			background-color: #23adaa;
+			transform: translateY(.2rem);
+		}
+	}
+	&--slick{
+		margin-top: 2.5rem;
+		.slick-list{
+			padding: 2rem 1rem;
+			.slick-slide{
+				margin-right: 1rem;
+				margin-left: 1rem;
+			}
+		}
+		.slick-prev, .slick-next{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			font-size: 4rem;
+			color: $c-mainColor;
+		}
+		.slick-prev{
+			left: -4rem;
+		}
+		.slick-next{
+			right: -4rem;
+		}
+		&-item{
+			height: 34rem;
+			width: 100%;
+			max-width: 26.5rem;
+			border: .1rem solid $c-lightGray;
+			border-radius: .6rem;
+			text-align: center;
+			position: relative;
+			img{
+				max-width: 20rem;
+				margin: 2rem auto 0 auto;
+			}
+			span{
+				display: block;
+				color: black;
+				font-size: 1.4rem;
+				margin-bottom: 1.5rem;
+			}
+			span:first-child{
+				color: #f0186a;
+			}
+			span:last-child{
+				font-size: 2rem;
+				font-weight: bold;
+				margin-top: 2rem;
+			}
+
+		}
+		.slick-dots{
+			display: block;
+			text-align: center;
+			margin-top: 2rem;
+			// align-items: center;
+			// justify-content: center;
+			li{
+				display: inline-block;
+			}
+			li.slick-active{
+				button{
+					background-color: $c-mainColor;
+				}
+			}
+		}
+		.slick-dot--button{
+			outline: none;
+			border: none;
+			width: 1rem;
+			height: 1rem;
+			border-radius: 50%;
+			margin: 0 1rem;
+			background-color: $c-lightGray;
+		}
+	}
+}
 ::placeholder {
    color: #000;
+}
+.movie-icon{
+	position: absolute;
+	top: -1rem;
+	left: -1rem;
+	width: 13rem;
+	height: 3.4rem;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: center;
+	padding-left: 1.5rem;
+	border-radius: 2rem;
+	background-color: $c-lightGreen;
+	color: white;
+	text-decoration: none;
+	i{
+		margin-right: 1rem;
+	} 
 }
 .see-the-list{
 	width: 100%;
