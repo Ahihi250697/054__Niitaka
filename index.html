@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
@@ -16,6 +16,8 @@
 	<link href="assets/css/reset.min.css" rel="stylesheet">
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/bootstrap-adjust.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/slick.css" rel="stylesheet">
 	<link href="css/common.css" rel="stylesheet">
 	<!-- build:addcss -->
 	<link href="css/index.css" rel="stylesheet">
@@ -47,27 +49,95 @@
 					<span>A</span>
 				</div>
 				<span class="header__lang border-right">English</span>
-				<span class="header__area">中 文</span>
-				<div class="header__button">
+				<span class="header__lang">中 文</span>
+			</div>
+			<div class="header__button">
 					<span> </span>
 					<span> </span>
 					<span> </span>
 				</div>
-			</div>
 		</div>
 		<nav class="header__nav">
 			<div class="container">
 				<div class="header__menu">
-					<div class="header__menu--wrap">
-						<ul class="header__menu--ul">
-							<li class="border-right"><a href="#link">メニュー</a></li>
-							<li class="border-right"><a href="#link">メニュー</a></li>
-							<li class="border-right"><a href="#link">メニュー</a></li>
-							<li class="border-right"><a href="#link">メニュー</a></li>
-							<li class="border-right"><a href="#link">メニュー</a></li>
-							<li class="border-right"><a href="#link">メニュー</a></li>
-							<li class="border-right"><a href="#link">メニュー</a></li>
-						</ul>
+					<div class="header__menu-item">
+						<a class="menu-link-item" href="#link">メニュー</a>
+						<div class="menu-hidden animated widthInLeft">
+							<ul>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__menu-item">
+						<a class="menu-link-item" href="#link">メニュー</a>
+						<div class="menu-hidden animated widthInLeft">
+							<ul>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__menu-item">
+						<a class="menu-link-item" href="#link">メニュー</a>
+						<div class="menu-hidden animated widthInLeft">
+							<ul>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__menu-item">
+						<a class="menu-link-item" href="#link">メニュー</a>
+						<div class="menu-hidden animated widthInLeft">
+							<ul>
+								<li><a href="#link">link item 1</a></li>
+								<li><a href="#link">link item 1</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__menu-item">
+						<a class="menu-link-item" href="#link">メニュー</a>
+						<div class="menu-hidden animated widthInLeft">
+							<ul>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__menu-item">
+						<a class="menu-link-item" href="#link">メニュー</a>
+						<div class="menu-hidden animated widthInLeft">
+							<ul>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__menu-item">
+						<a class="menu-link-item" href="#link">メニュー</a>
+						<div class="menu-hidden animated widthInLeft">
+							<ul>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+								<li><a href="">link item 1</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -75,17 +145,401 @@
 		</nav>
 	</div>
 	<!-- /build:header -->
-
 	</header>
 	<main>
 	<!-- build:content -->
+		<section class="mv">
+			<div class="mv-slick">
+				<div class="mv-slick-item">
+					<img src="images/img_washing.jpg" alt="img_washing">
+				</div>
+				<div class="mv-slick-item">
+					<img src="images/img_washing.jpg" alt="img_washing">
+				</div>
+				<div class="mv-slick-item">
+					<img src="images/img_washing.jpg" alt="img_washing">
+				</div>
+			</div>
+			<div class="mv-content">
+				<p>この文章はダミーです。</p>
+				<h2>フードビジネス業界のベストパートナーを目指して</h2>
+				<a class="mv-button" href="#link">事業案内へ</a>
+			</div>
+			<div class="mv-banner container">
+				<div class="mv-banner-item">
+					<img src="images/img_banner01.jpg" alt="img_banner01">
+				</div>
+				<div class="mv-banner-item">
+					<img src="images/img_banner02.jpg" alt="img_banner02">
+				</div>
+				<div class="mv-banner-item">
+					<img src="images/img_banner03.jpg" alt="img_banner03">
+				</div>
+				<div class="mv-banner-item">
+					<img src="images/img_banner04.jpg" alt="img_banner04">
+				</div>
+				<div class="mv-banner-item">
+					<img src="images/img_banner02.jpg" alt="img_banner02">
+				</div>
+
+			</div>
+		</section>
+		<section class="notification">
+			<div class="container notification-flex">
+				<div class="new-arival">
+					<div class="new-arival--title">
+						<h2>お知らせ</h2>
+						<a href="#link" class="see-the-list">一覧を見る<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+					<div class="new-arival--information">
+						<div class="new-arival--information-item">
+							<span>0000.00.00</span>
+							<a href="#link" class="bg-bblue">会社情報</a>
+							<span class="c-cblue">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span>
+						</div>
+						<div class="new-arival--information-item">
+							<span>0000.00.00</span>
+							<a href="#link" class="bg-bgreen">会社情報</a>
+							<span>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span>
+						</div>
+						<div class="new-arival--information-item">
+							<span>0000.00.00</span>
+							<a href="#link" class="bg-bgray">会社情報</a>
+							<span>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span>
+						</div>
+					</div>
+				</div>
+				<div class="surrounding">
+					<div class="surrounding--title">
+						<h2>環境報告</h2>
+						<a href="#link" class="see-the-list">一覧を見る<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+					<div class="surrounding--information">	
+						<div class="surrounding--information-item">
+							<span>環境報告書0000</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="product">
+			<div class="container">
+				<div class="product-information">
+					<div class="product-information--title">
+						<h2>製品情報</h2>
+						<a href="#link" class="see-the-list">製品情報へ<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="product-detail">
+					<div class="product-detail--selection">
+						<button class="product-detail--button active" data-opentab="#product-detail--type01">
+							商品カテゴリーで選ぶ
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+						<button class="product-detail--button" data-opentab="#product-detail--type02">
+							汚れで選ぶ
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+						<button class="product-detail--button" data-opentab="#product-detail--type03">
+							洗浄箇所で選ぶ
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="product-detail--type">
+						<div id="product-detail--type01" class="product-detail--container active">
+							<h3 class="product-detail--title">商品カテゴリーで選ぶ</h3>
+							<button class="product-detail--item active">
+								食器用洗剤
+							</button>
+							<button class="product-detail--item">
+								除菌・漂白剤
+							</button>
+							<button class="product-detail--item">
+								除菌洗剤
+							</button>
+							<button class="product-detail--item">
+								油汚れ落とし
+							</button>
+							<button class="product-detail--item">
+								店舗用
+							</button>
+							<button class="product-detail--item">
+								手洗い
+							</button>
+							<button class="product-detail--item">
+								アルコール製剤
+							</button>
+							<button class="product-detail--item">
+								設備用
+							</button>
+							<button class="product-detail--item">
+								洗濯用
+							</button>
+							<button class="product-detail--item">
+								その他
+							</button>
+							<button class="product-detail--item">
+								食器洗浄機関連
+							</button>
+							<button class="product-detail--item">
+								固形燃料
+							</button>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_02.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_02.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div id="product-detail--type02" class="product-detail--container">
+							<h3 class="product-detail--title">汚れで選ぶ</h3>
+							<button class="product-detail--item">
+								食器用洗剤
+							</button>
+							<button class="product-detail--item active">
+								除菌・漂白剤
+							</button>
+							<button class="product-detail--item">
+								除菌洗剤
+							</button>
+							<button class="product-detail--item">
+								油汚れ落とし
+							</button>
+							<button class="product-detail--item">
+								店舗用
+							</button>
+							<button class="product-detail--item">
+								手洗い
+							</button>
+							<button class="product-detail--item">
+								アルコール製剤
+							</button>
+							<button class="product-detail--item">
+								設備用
+							</button>
+							<button class="product-detail--item">
+								洗濯用
+							</button>
+							<button class="product-detail--item">
+								その他
+							</button>
+							<button class="product-detail--item">
+								食器洗浄機関連
+							</button>
+							<button class="product-detail--item">
+								固形燃料
+							</button>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_02.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_02.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div id="product-detail--type03" class="product-detail--container">
+							<h3 class="product-detail--title">洗浄箇所で選ぶ</h3>
+							<button class="product-detail--item">
+								食器用洗剤
+							</button>
+							<button class="product-detail--item">
+								除菌・漂白剤
+							</button>
+							<button class="product-detail--item active">
+								除菌洗剤
+							</button>
+							<button class="product-detail--item">
+								油汚れ落とし
+							</button>
+							<button class="product-detail--item">
+								店舗用
+							</button>
+							<button class="product-detail--item">
+								手洗い
+							</button>
+							<button class="product-detail--item">
+								アルコール製剤
+							</button>
+							<button class="product-detail--item">
+								設備用
+							</button>
+							<button class="product-detail--item">
+								洗濯用
+							</button>
+							<button class="product-detail--item">
+								その他
+							</button>
+							<button class="product-detail--item">
+								食器洗浄機関連
+							</button>
+							<button class="product-detail--item">
+								固形燃料
+							</button>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_02.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_02.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+							<div class="product-detail--follow">
+								<div class="product-detail--img">
+									<img src="images/icon_goods_01.jpg" alt="icon goods">
+								</div>
+								<span>
+									商品名
+								</span>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pick-up">
+			<div class="container">
+				<div class="pick-up--slick">
+					<div class="pick-up--slick-item">
+						<img src="images/icon_goods_01_big.jpg" alt="img gooods pick-up">
+					</div>
+					<div class="pick-up--slick-item">
+						<img src="images/icon_goods_02_big.jpg" alt="img gooods pick-up">
+					</div>
+					<div class="pick-up--slick-item">
+						<img src="images/icon_goods_01_big.jpg" alt="img gooods pick-up">
+					</div>
+					<div class="pick-up--slick-item">
+						<img src="images/icon_goods_02_big.jpg" alt="img gooods pick-up">
+					</div>
+					<div class="pick-up--slick-item">
+						<img src="images/icon_goods_01_big.jpg" alt="img gooods pick-up">
+					</div>
+					<div class="pick-up--slick-item">
+						<img src="images/icon_goods_02_big.jpg" alt="img gooods pick-up">
+					</div>
+				</div>
+			</div>
+			
+		</section>
+
+	<!-- /build:content -->
 	</main>
 	<footer>
 	<!-- build:footer -->
+	<div class="f"></div>
 	</footer>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/js/fontawesome.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/slick.js"></script>
 	<script src="js/general.js"></script>
+	<script src="js/common.js"></script>
 	<!-- build:addJs -->
 </body>
 </html>
