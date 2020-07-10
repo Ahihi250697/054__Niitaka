@@ -2429,8 +2429,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .slideInLeft {
-  -webkit-animation-name: widthInLeft;
-  animation-name: widthInLeft;
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
 }
 /*---------------*/
 @-webkit-keyframes widthInLeft {
@@ -2468,6 +2468,34 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .widthInLeft {
   -webkit-animation-name: widthInLeft;
   animation-name: widthInLeft;
+}
+/*---------------*/
+@-webkit-keyframes subMenuDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    height: calc(100vh - 6rem);
+  }
+}
+
+@keyframes subMenuDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    height: calc(100vh - 6rem);
+    
+  }
+}
+
+.subMenuDown {
+  -webkit-animation-name: subMenuDown;
+  animation-name: subMenuDown;
 }
 /*---------------*/
 @-webkit-keyframes slideInRight {

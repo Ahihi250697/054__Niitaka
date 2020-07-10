@@ -4,14 +4,14 @@ $(function () {
         if (!$(this).is('.active')) {
             $(this).addClass('active');
             $('.header__nav').addClass('active');
-            $('.header__content').addClass('active');
-            Scroll.disable();
+             $('.header__menu').addClass('subMenuDown');
+            // Scroll.disable();
         } else {
             $(this).removeClass('active');
             $('.header__nav').removeClass('active');
-            $('.header__content').removeClass('active');
+            // $('.header__content').removeClass('active');
 
-            Scroll.enable();
+            // Scroll.enable();
         }
     });
     const Scroll = (function () {

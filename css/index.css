@@ -193,7 +193,6 @@
 @media screen and (max-width: 1024px) {
   .header__menu {
     flex-direction: column;
-    height: calc(100vh - 6rem);
   }
 }
 .header__menu-item {
@@ -228,6 +227,10 @@
     padding: 1.5rem 2rem;
   }
 }
+.header__menu-item .menu-link-item.active {
+  background-color: #044c99;
+  color: white;
+}
 .header__menu-item .menu-link-item::after {
   content: "";
   width: 0.1rem;
@@ -240,9 +243,6 @@
   .header__menu-item .menu-link-item::after {
     margin: auto 0 auto 1rem;
   }
-}
-.header__menu-item:hover .menu-link-item {
-  color: #044c99;
 }
 @media only screen and (min-width: 1025px) {
   .header__menu-item:hover .menu-hidden {
@@ -343,6 +343,10 @@
 }
 .menu-hidden ul li:hover {
   background-color: #ccc;
+}
+
+.menu-hidden.active {
+  display: block;
 }
 
 .menu-hidden::after {
@@ -458,7 +462,7 @@
 }
 @media screen and (max-width: 768px) {
   .mv-button {
-    height: 4rem;
+    display: none;
   }
 }
 .mv-button::after {
@@ -487,6 +491,11 @@
 @media screen and (min-width: 1140px) {
   .mv-banner {
     max-width: 1120px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mv-banner {
+    bottom: -6rem;
   }
 }
 .mv-banner .slick-track {
@@ -635,7 +644,7 @@
 .new-arival--information-item span {
   font-size: 1.4rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .new-arival--information-item {
     padding: 2rem;
   }

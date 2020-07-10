@@ -183,7 +183,7 @@ $c-lightWhite: #f5f6f8;
 		position: relative;
 		@include ipadpro{
 			flex-direction: column;
-			height: calc(100vh - 6rem);
+			// height: calc(100vh - 6rem);
 		}
 		&-item{
 			width: 100%;
@@ -212,6 +212,10 @@ $c-lightWhite: #f5f6f8;
 					padding: 1.5rem 2rem;
 				}
 			}
+			.menu-link-item.active{
+				background-color: $c-mainColor;
+				color: white;
+			}
 			.menu-link-item::after{
 				content:'';
 				width: .1rem;
@@ -225,16 +229,9 @@ $c-lightWhite: #f5f6f8;
 			}
 		}
 		&-item:hover{
-			// background-color: $c-mainColor;
-			.menu-link-item{
-				color: $c-mainColor;
-			}
 			@media only screen and (min-width: 1025px) {
 				.menu-hidden{
 					display: block;
-					// @include mobile{
-					// 	display: flex;
-					// }
 				}
 			}
 			
@@ -296,7 +293,6 @@ $c-lightWhite: #f5f6f8;
 	@include ipadpro{
 		position: unset;
 	}
-	// border-top: .5rem solid $c-mainColor;
 	ul{
 		width: 100%;
 		display: flex;
@@ -329,6 +325,9 @@ $c-lightWhite: #f5f6f8;
 			background-color: #ccc;
 		}
 	}
+}
+.menu-hidden.active{
+	display: block;
 }
 .menu-hidden::after{
 	// content:'';
@@ -432,8 +431,11 @@ $c-lightWhite: #f5f6f8;
 		font-weight: bold;
 		font-size: 1.8rem;
 		transition: all .3s ease;
+		// @include mobile{
+		// 	height: 4rem;
+		// }
 		@include mobile{
-			height: 4rem;
+			display: none;
 		}
 	}
 	&-button::after{
@@ -458,6 +460,9 @@ $c-lightWhite: #f5f6f8;
 		}
 		@media screen and (min-width: 1140px) {
 			max-width: 1120px;
+		}
+		@include ip5{
+			bottom: -6rem;
 		}
 		.slick-track{
 			padding: 1rem;
@@ -588,7 +593,7 @@ $c-lightWhite: #f5f6f8;
 			span{
 				font-size: 1.4rem;
 			}
-			@include mobile{
+			@include ipadpro{
 				padding: 2rem;
 				span:last-child{
 					display: block;

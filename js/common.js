@@ -54,11 +54,14 @@ $(function(){
 		    }
 		]
 	});
-	$('.mv-banner').find('.slick-next').html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
-	$('.mv-banner').find('.slick-prev').html('<i class="fa fa-angle-left" aria-hidden="true"></i>');
+	$(window).on('resize load',function(){
+		$('.mv-banner').find('.slick-next').html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
+		$('.mv-banner').find('.slick-prev').html('<i class="fa fa-angle-left" aria-hidden="true"></i>');
 
-	$('.pick-up--slick').find('.slick-next').html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
-	$('.pick-up--slick').find('.slick-prev').html('<i class="fa fa-angle-left" aria-hidden="true"></i>');
+		$('.pick-up--slick').find('.slick-next').html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
+		$('.pick-up--slick').find('.slick-prev').html('<i class="fa fa-angle-left" aria-hidden="true"></i>');
+	}
+	);
 	
 	$('.product-detail--button').click(function() {console.log(_wh);
 		if(!$(this).hasClass('active')){
@@ -106,3 +109,19 @@ function __delayCall(func, timed){
 		timeout = setTimeout(func, timed);
 	};
 }
+
+$('.menu-link-item').click(function(event) {
+	var _wh = $(window).width();
+		if(_wh <= 1024){
+			if($(this).hasClass('active')){
+			$(this).parent().find('.menu-hidden').removeClass('active');
+			$(this).removeClass('active'); 	
+			}
+			else{
+				$('.menu-link-item').removeClass('active');
+				$('.menu-hidden').removeClass('active');
+				$(this).addClass('active');
+				$(this).parent().find('.menu-hidden').addClass('active');
+			}
+		}
+	});
