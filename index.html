@@ -48,8 +48,8 @@
 					</label> 
 					<span>A</span>
 				</div>
-				<span class="header__lang border-right">English</span>
-				<span class="header__lang">中 文</span>
+				<a href="#link" class="header__lang border-right">English</a>
+				<a href="#link" class="header__lang">中 文</a>
 			</div>
 			<div class="header__button">
 					<span> </span>
@@ -59,7 +59,7 @@
 		</div>
 		<nav class="header__nav">
 			<div class="container">
-				<div class="header__menu animated">
+				<div class="header__menu">
 					<div class="header__menu-item">
 						<a class="menu-link-item" href="#link">メニュー</a>
 						<div class="menu-hidden animated widthInLeft">
@@ -146,7 +146,7 @@
 	</div>
 	<!-- /build:header -->
 	</header>
-	<main>
+	<main  id="main">
 	<!-- build:content -->
 		<!-- build:mv -->
 		<section class="mv">
@@ -291,6 +291,7 @@
 							<button class="product-detail--item">
 								固形燃料
 							</button>
+							<div>
 							<div class="product-detail--follow">
 								<div class="product-detail--img">
 									<img src="images/icon_goods_01.jpg" alt="icon goods">
@@ -335,6 +336,7 @@
 									商品名
 								</span>
 								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</div>
 							</div>
 						</div>
 						<div id="product-detail--type02" class="product-detail--container">
@@ -625,14 +627,19 @@
 				<div class="footer-rectangle-item"></div>
 				<div class="footer-rectangle-item"></div>
 			</div>
-			<div class="footer-endpage">
-				<a href="#link">サイトマップ　｜　個人情報保護方針</a>
-				<a href="#link">©0000 SAMPLE Inc. All Rights Reserved.</a>
+		</div>
+		<div>
+			<div class="container">
+				<div class="footer-endpage">
+					<a href="#link">サイトマップ</a><span>　｜　</span><a href="#link">個人情報保護方針</a>
+					<a href="#link">©0000 SAMPLE Inc. All Rights Reserved.</a>
+				</div>
 			</div>
 		</div>
 		
 	<!-- /build:footer -->
 	</footer>
+	<a href="#main" id="backTop"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/js/fontawesome.min.js"></script>
 	<script src="js/wow.min.js"></script>

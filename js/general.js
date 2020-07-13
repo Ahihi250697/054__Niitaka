@@ -4,15 +4,17 @@ $(function () {
         if (!$(this).is('.active')) {
             $(this).addClass('active');
             $('.header__nav').addClass('active');
-             $('.header__menu').addClass('subMenuDown');
-            // Scroll.disable();
+            $('.header__menu').slideDown("300");
+            //Scroll.disable();
         } else {
             $(this).removeClass('active');
-            $('.header__nav').removeClass('active');
-            // $('.header__content').removeClass('active');
-
-            // Scroll.enable();
+            $('.header__menu').slideUp("300", function(){
+                    $('.header__nav').removeClass('active');
+                    $('.menu-hidden').removeClass('active');
+              });
+            //Scroll.enable();
         }
+
     });
     const Scroll = (function () {
         // left: 37, up: 38, right: 39, down: 40,
@@ -59,40 +61,13 @@ $(function () {
     })();
 });
 
-$(function () {
-    $('.button__accor').on('click', function () {
-        if (!$('.step__content').is('.active')) {
-            $('.step__content').removeClass('active');
-            $('.step__content').css('height', '0px');
-            $(this).children('.faq__questions--A').css('height', $('.faq__questions--hiden').height() + 'px');
-            $(this).addClass('active');
-        }
-        else {
-            $(this).removeClass('active');
-            $(this).children('.faq__questions--A').css('height', '0px');
-        }
-    });
-
-});
-$('.step__info').on('click', function () {
-    if ($(this).parent().is('.expand')) {
-        $(this).parent().removeClass('expand');
-        $(this).next().css('height', '0px');
-    } else {
-        $(this).parent().addClass('expand');
-        $(this).next().css('height', $(this).next().children().outerHeight() + 'px');
-        console.log($(this).next().css('height', $(this).next().children().outerHeight() + 'px'))
-        console.log($(this).next().children());
-    }
-});
-
 window.onscroll = function () {
     var _curPos = window.pageYOffset;
-    var _curH = $(window).height()/2;
+    var _curH = $(window).height()/5;
     if(_curPos > _curH){
 
         $('#backTop').css({
-            display: 'block'
+            display: 'flex'
         });
     }
     else {
@@ -103,6 +78,7 @@ window.onscroll = function () {
 }
 $('#backTop').click(function (event) {
     /* Act on the event */
+    console.log("asd");
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 1000, 'swing');
