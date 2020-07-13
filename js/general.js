@@ -6,12 +6,20 @@ $(function () {
             $('.header__nav').addClass('active');
             $('.header__menu').slideDown("300");
             //Scroll.disable();
+            var _wh = $(window).width();
+            if(_wh <= 768){
+                $(this).after(__langMobile());
+                $('.header__menu-item').first().before(_inputMobile);
+            }
         } else {
             $(this).removeClass('active');
             $('.header__menu').slideUp("300", function(){
                     $('.header__nav').removeClass('active');
                     $('.menu-hidden').removeClass('active');
+                    $('#lang-mobile').remove();
+                    $('.header__search--mobile').remove();
               });
+
             //Scroll.enable();
         }
 
@@ -60,6 +68,30 @@ $(function () {
         }
     })();
 });
+
+var _langMobile = ['English', '中 文'];
+var _inputMobile ='<form class="header__search--mobile"><input type="text" class="header__input--mobile" placeholder="サイト内検索"><i class="fa fa-search" aria-hidden="true"></i></form>';
+
+var _openSelect = "<select id='lang-mobile'>";
+var _closeSelect = "</select>";
+var _langIsOpen = 0;
+function __langMobile(){
+    var _returnS = '';
+    if (_langIsOpen == 0){
+        _returnS += _openSelect;
+         $.each(_langMobile, function(index, val) {
+         /* iterate through array or object */
+             _returnS += '<option value="'+val+'">'+val+'</option>';
+        });
+        _langIsOpen == -1;
+        console.log(_returnS+= _closeSelect);
+        return _returnS += _closeSelect;
+    }
+    else
+    {
+        _langIsOpen = 0;
+    }
+}
 
 window.onscroll = function () {
     var _curPos = window.pageYOffset;

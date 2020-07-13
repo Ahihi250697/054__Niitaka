@@ -44,7 +44,6 @@
 @media screen and (max-width: 768px) {
   .header__container {
     padding: 1rem 2rem;
-    flex-direction: column;
     position: relative;
   }
 }
@@ -95,13 +94,16 @@
     display: flex;
   }
 }
-.header__search {
+.header__search, .header__search--mobile {
   display: flex;
   align-items: center;
 }
-.header__search i {
+.header__search i, .header__search--mobile i {
   color: #044c99;
   margin-left: 1rem;
+}
+.header__search--mobile {
+  padding: 1rem 2rem;
 }
 .header__search::after {
   content: "";
@@ -122,6 +124,14 @@
   .header__input {
     display: none;
   }
+}
+.header__input--mobile {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-top: 0.2rem;
+  outline: none;
+  border: 0.1rem solid #cfd2db;
+  border-radius: 1.5rem;
 }
 .header__change-size {
   display: flex;
@@ -258,7 +268,7 @@
 }
 @media screen and (max-width: 768px) {
   .header__menu-item .menu-link-item::after {
-    margin: auto 0 auto 1rem;
+    display: none;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -307,6 +317,10 @@
 }
 .header__button.active span:last-child {
   transform: rotate(-45deg);
+}
+
+#lang-mobile {
+  margin-right: 4rem;
 }
 
 .menu-hidden {
@@ -492,7 +506,7 @@
 }
 .mv-banner {
   position: absolute;
-  bottom: 0;
+  bottom: -2rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -1485,10 +1499,11 @@
   position: fixed;
   width: 5rem;
   height: 5rem;
-  bottom: 10rem;
-  right: 4rem;
+  bottom: 10vw;
+  right: 4vw;
   background-color: #044c99;
   border-radius: 50%;
+  display: none;
   justify-content: space-around;
   align-items: center;
   font-size: 3.4rem;

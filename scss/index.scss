@@ -43,7 +43,7 @@ $c-lightWhite: #f5f6f8;
 		@include mobile{
 			// height: 6rem;
 			padding: 1rem 2rem;
-			flex-direction: column;
+			// flex-direction: column;
 			position: relative;
 		}
 	}
@@ -87,13 +87,16 @@ $c-lightWhite: #f5f6f8;
 		}
 	}
 	
-	&__search{
+	&__search, &__search--mobile{
 		display: flex;
 		align-items: center;
 		i{
 			color: $c-mainColor;
 			margin-left: 1rem;
 		}
+	}
+	&__search--mobile{
+		padding: 1rem 2rem;
 	}
 	&__search::after{
 		content: '';
@@ -112,6 +115,14 @@ $c-lightWhite: #f5f6f8;
 		@include ipadpro{
 			display: none;
 		}
+	}
+	&__input--mobile{
+		width: 100%;
+		padding-left: 1.5rem;
+		padding-top: .2rem;
+		outline: none;
+		border: .1rem solid $c-lightGray;
+		border-radius: 1.5rem;
 	}
 	&__change-size{
 		display: flex;
@@ -239,7 +250,8 @@ $c-lightWhite: #f5f6f8;
 				right: 0;
 				background-color: $c-lightGray;
 				@include mobile{
-					margin: auto 0 auto 1rem;
+					// margin: auto 0 auto 1rem;
+					display: none;
 				}
 			}
 		}
@@ -294,6 +306,9 @@ $c-lightWhite: #f5f6f8;
 			transform: rotate(-45deg);
 		}
 	}
+}
+#lang-mobile{
+	margin-right: 4rem;
 }
 .menu-hidden{
 	width: 100%;
@@ -467,7 +482,7 @@ $c-lightWhite: #f5f6f8;
 	}
 	&-banner{
 		position: absolute;
-		bottom: 0;
+		bottom: -2rem;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 100%;
@@ -1363,11 +1378,11 @@ $c-lightWhite: #f5f6f8;
 	position: fixed;
 	width: 5rem;
 	height: 5rem;
-	bottom: 10rem;
-	right: 4rem;
+	bottom: 10vw;
+	right: 4vw;
 	background-color: $c-mainColor;
 	border-radius: 50%;
-	// text-align: center;
+	display:none;
 	justify-content: space-around;
 	align-items: center;
 	font-size: 3.4rem;
