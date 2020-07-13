@@ -207,6 +207,7 @@ $c-lightWhite: #f5f6f8;
 		@include ipadpro{
 			flex-direction: column;
 			height: calc(100vh - 6rem);
+			overflow-y: auto;
 		}
 		&-item{
 			width: 100%;
