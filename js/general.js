@@ -84,7 +84,6 @@ function __langMobile(){
              _returnS += '<option value="'+val+'">'+val+'</option>';
         });
         _langIsOpen == -1;
-        console.log(_returnS+= _closeSelect);
         return _returnS += _closeSelect;
     }
     else
@@ -93,26 +92,32 @@ function __langMobile(){
     }
 }
 
+var _toTopIsOpen = -1;
 window.onscroll = function () {
     var _curPos = window.pageYOffset;
-    var _curH = $(window).height()/5;
-    if(_curPos > _curH){
-
-        $('#backTop').css({
-            display: 'flex'
-        });
-    }
+    if(_curPos > 200){
+        if(_toTopIsOpen == -1){
+            $('#backTop').css({
+                display: 'flex'
+            });
+            _toTopIsOpen = 0;
+        }
+    }    
     else {
-        $('#backTop').css({
-            display: 'none'
-        });
+        if(_toTopIsOpen == 0){
+            $('#backTop').css({
+                display: 'none'
+            });
+             _toTopIsOpen = -1;
+        }
+        
     }
 }
 $('#backTop').click(function (event) {
     /* Act on the event */
-    console.log("asd");
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
+        //scrollTop: $($(this).attr('href')).offset().top
     }, 1000, 'swing');
 });
 
