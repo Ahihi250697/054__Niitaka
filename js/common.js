@@ -138,6 +138,10 @@ $(window).on('load resize', function(){
 	else{
 		__delayCall(__addClass($('.menu-hidden'), 'animated'), 500);
 	}
+	if(_wh > 768){
+		$('#lang-mobile').remove();
+		$('.header__search--mobile').remove();
+	}
 	fitItemOnRow();
 });
 
