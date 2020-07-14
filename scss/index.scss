@@ -387,6 +387,9 @@ $c-lightWhite: #f5f6f8;
 			max-height: 70rem;
 			overflow: hidden;
 			position: relative;
+			@include mobile{
+				height: 30rem;
+			}
 			img{
 				width: 100%;
 				height: 100%;
@@ -463,11 +466,10 @@ $c-lightWhite: #f5f6f8;
 		font-weight: bold;
 		font-size: 1.8rem;
 		transition: all .3s ease;
-		// @include mobile{
-		// 	height: 4rem;
-		// }
-		@media only screen and (max-width: 767px) {
-			display: none;
+		@include mobile{
+		 	height: 4rem;
+		 	font-size: 1.4rem;
+		 	max-width: 20rem;
 		}
 	}
 	&-button::after{

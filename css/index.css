@@ -411,6 +411,11 @@
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .mv-slick-item {
+    height: 30rem;
+  }
+}
 .mv-slick-item img {
   width: 100%;
   height: 100%;
@@ -489,9 +494,11 @@
   font-size: 1.8rem;
   transition: all 0.3s ease;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv-button {
-    display: none;
+    height: 4rem;
+    font-size: 1.4rem;
+    max-width: 20rem;
   }
 }
 .mv-button::after {
