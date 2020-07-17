@@ -1137,6 +1137,7 @@ $c-lightWhite: #f5f6f8;
 		min-height: 38rem;
 		@include mobile{
 			flex-wrap: wrap;
+			background-color: white;
 		}
 		&-box{
 			width: 100%;
@@ -1320,6 +1321,11 @@ $c-lightWhite: #f5f6f8;
 	flex-direction: column;
 	align-items: center;
 	margin: 1rem;
+	@include mobile{
+		max-width: 48%;
+		min-width: 30rem;
+		margin: 1rem auto;
+	}
 	img{
 		max-width: 12rem;
 	}
